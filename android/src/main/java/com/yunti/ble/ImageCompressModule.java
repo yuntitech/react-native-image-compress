@@ -140,12 +140,9 @@ public class ImageCompressModule extends ReactContextBaseJavaModule implements L
         byte[] finalBytes;
         boolean halfIsBigThanTarget = false;
         while (true) {
-            Log.e("villa", "minValue==" + minValue + "=maxValue==="
-                    +maxValue+"==halfIsBigThanTarget="+halfIsBigThanTarget);
             int currentValue = (int) ((maxValue + minValue) * 1f / 2);
             baos.reset();
             bmp.compress(Bitmap.CompressFormat.JPEG, currentValue, baos);
-            Log.e("villa", "currentIndex==" + compressCount + "==" + baos.toByteArray().length);
             if (compressCount == 0) {
                 halfIsBigThanTarget = baos.toByteArray().length > targetSize;
                 minValue = baos.toByteArray().length < targetSize ? currentValue : min;
@@ -172,7 +169,6 @@ public class ImageCompressModule extends ReactContextBaseJavaModule implements L
             }
             compressCount++;
         }
-        Log.e("villa", "finalBytes==" + finalBytes.length);
         return finalBytes;
     }
 
