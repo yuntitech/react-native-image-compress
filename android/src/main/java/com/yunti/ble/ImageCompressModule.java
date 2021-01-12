@@ -58,13 +58,6 @@ public class ImageCompressModule extends ReactContextBaseJavaModule implements L
 
     }
 
-
-    @ReactMethod
-    public void isBluetoothOpen(Promise promise) {
-
-
-    }
-
     @ReactMethod
     public void compressImage(ReadableMap params, final Promise promise) {
         final String imageFileUri = params.getString("imageFileUri");
@@ -226,4 +219,18 @@ public class ImageCompressModule extends ReactContextBaseJavaModule implements L
 
     }
 
+    @Override
+    public void onHostResume() {
+
+    }
+
+    @Override
+    public void onHostPause() {
+
+    }
+
+    @Override
+    public void onHostDestroy() {
+
+    }
 }

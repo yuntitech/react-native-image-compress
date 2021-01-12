@@ -23,4 +23,4 @@ class ImageCompressUtil {
   };
 }
 
-const imageCompressUtil = new ImageCompressUtil();
+export const imageCompressUtil = new ImageCompressUtil();
