@@ -1,0 +1,18 @@
+{
+  "name": "@yunti/react-native-image-compress",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "homepage": "https://github.com/yuntitech/react-native-image-compress",
+  "description": "https://github.com/yuntitech/react-native-image-compress for React Native",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "yunti",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": ">0.50.0"
+  }
+}
