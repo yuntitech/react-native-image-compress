@@ -1,6 +1,6 @@
 {
   "name": "@yunti/react-native-image-compress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.ts",
   "homepage": "https://github.com/yuntitech/react-native-image-compress",
   "description": "https://github.com/yuntitech/react-native-image-compress for React Native",
