@@ -1,4 +1,4 @@
-package com.yunti.ble;
+package com.yunti.imagecompress;
 
 
 import android.content.Context;
@@ -7,7 +7,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
@@ -39,7 +38,7 @@ import java.util.Locale;
 @ReactModule(name = ImageCompressModule.NAME)
 public class ImageCompressModule extends ReactContextBaseJavaModule implements LifecycleEventListener {
 
-    static final String NAME = "ImageCompressModule";
+    static final String NAME = "YTImageCompress";
 
     public ImageCompressModule(ReactApplicationContext reactContext) {
         super(reactContext);

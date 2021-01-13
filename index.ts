@@ -1,4 +1,4 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules, Platform } from "react-native";
 
 /** 文件压缩参数 */
 export interface ImageCompressParams {
@@ -17,11 +17,7 @@ class ImageCompressUtil {
   compressImage = async (
     params: ImageCompressParams
   ): Promise<{ compressedUri: string }> => {
-    const Module =
-      Platform.OS === 'ios'
-        ? NativeModules.YTImageCompress
-        : NativeModules.ImageCompressModule;
-    return Module.compressImage(params);
+    return NativeModules.YTImageCompress.compressImage(params);
   };
 }
 
