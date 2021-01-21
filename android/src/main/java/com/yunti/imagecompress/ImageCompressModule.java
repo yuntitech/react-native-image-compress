@@ -89,7 +89,7 @@ public class ImageCompressModule extends ReactContextBaseJavaModule implements L
                     bitmap = qualityCompress(bitmap, maxFileSize);
                     saveImage(getCurrentActivity(), bitmap, promise);
                 } catch (FileNotFoundException e) {
-                    promise.reject("", "图片压缩出错");
+                    promise.reject("", "读取图片失败");
                 }
             }
         });

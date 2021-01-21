@@ -13,7 +13,7 @@ RCT_EXPORT_METHOD(compressImage:(NSDictionary *)params
   if (imageFileUri == nil || [imageFileUri isKindOfClass:NSString.class] == NO
       || maxWidthOrHeightNumber == nil || [maxWidthOrHeightNumber isKindOfClass:NSNumber.class] == NO
       || maxFileSizeNumber == nil || [maxFileSizeNumber isKindOfClass:NSNumber.class] == NO) {
-    reject(@"parametersInvalid", @"check imageFileUri, maxWidthOrHeight, maxFileSize" ,nil);
+    reject(@"parametersInvalid", @"读取图片失败" ,nil);
     return;
   }
   
