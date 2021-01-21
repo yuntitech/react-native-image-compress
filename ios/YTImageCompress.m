@@ -19,7 +19,7 @@ RCT_EXPORT_METHOD(compressImage:(NSDictionary *)params
   
   UIImage *image = [UIImage imageWithContentsOfFile:imageFileUri];
   if (image == nil) {
-    reject(@"imageInvalid", @"图片加载失败", nil);
+    reject(@"imageInvalid", @"读取图片失败", nil);
     return;
   }
   

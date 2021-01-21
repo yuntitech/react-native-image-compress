@@ -63,7 +63,7 @@ public class ImageCompressModule extends ReactContextBaseJavaModule implements L
         final int maxWidthOrHeight = params.getInt("maxWidthOrHeight");
         final int maxFileSize = params.getInt("maxFileSize");
         if (TextUtils.isEmpty(imageFileUri) || maxWidthOrHeight == 0 || maxFileSize == 0 || getCurrentActivity() == null) {
-            promise.reject("", "图片出错");
+            promise.reject("", "读取图片失败");
             return;
         }
         ThreadPoolManager.INSTANCE.getMNormalPool().execute(new Runnable() {
@@ -89,7 +89,7 @@ public class ImageCompressModule extends ReactContextBaseJavaModule implements L
                     bitmap = qualityCompress(bitmap, maxFileSize);
                     saveImage(getCurrentActivity(), bitmap, promise);
                 } catch (FileNotFoundException e) {
-                    promise.reject("", "图片出错");
+                    promise.reject("", "图片压缩出错");
                 }
             }
         });
@@ -205,7 +205,7 @@ public class ImageCompressModule extends ReactContextBaseJavaModule implements L
                 image.compress(Bitmap.CompressFormat.JPEG, 100, fOut);
                 fOut.close();
             } catch (Exception e) {
-                promise.reject("", "图片出错");
+                promise.reject("", "图片写入失败");
             }
             WritableMap args = Arguments.createMap();
             args.putString("compressedUri", Uri.fromFile(imageFile).toString());
